@@ -1,2 +1,4 @@
 [build]
-functions = './functions'
+  command = "npm build && cd functions/departmentData && npm && cd functions/designationData && npm && cd functions/employeeData && npm"
+  functions = "./functions"
+  publish = "dist"
