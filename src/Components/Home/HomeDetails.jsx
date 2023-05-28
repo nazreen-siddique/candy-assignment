@@ -58,12 +58,13 @@ const HomeDetails = ({ users }) => {
   useEffect(() => {
     setData(doFilterOfData());
     setSearchValue('');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isInActive]);
 
   useEffect(() => {
     if (!!searchValue) {
       let iterableData = data;
-      if (iterableData.length == 0) {
+      if (iterableData.length === 0) {
         iterableData = doFilterOfData()
       }
       const value = iterableData.filter((item) => item.name.toLowerCase().includes(searchValue.toLowerCase())
@@ -72,6 +73,7 @@ const HomeDetails = ({ users }) => {
     } else {
       setData(doFilterOfData());
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchValue])
 
 

@@ -19,7 +19,7 @@ const Chart = ({ chartData }) => {
         }
     });
     ///////ONCE WE HAVE ALL THE COUNTS , REARRANGE THAT WITH FUSION CHARTS REQUIREMENT////////
-    Object.entries(hashMap).map((item) => {
+    Object.entries(hashMap).forEach((item) => {
         data.push({
             "label": item[0],
             "value": item[1]
